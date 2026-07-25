@@ -121,7 +121,7 @@
              <li class="nav-item">
                 <a class="nav-link" href="tabel_language.php">
                     <i class="fas fa-fw fa-chart-area"></i>
-                    <span>Language</span></a>
+                    <span>Languange</span></a>
             </li>
              <li class="nav-item">
                 <a class="nav-link" href="tabel_portfolio.php">
