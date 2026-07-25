@@ -79,8 +79,9 @@ $select_sidebar_photo = mysqli_query(
     </div>
 
   <input type="hidden"
-       name="id_sidebar_photo">
-      
+       name="id_sidebar_photo"
+       value="<?php echo $id_sidebar_photo->id_sidebar_photo; ?>">
+
 
     <button type="submit" class="btn btn-primary">
         Submit

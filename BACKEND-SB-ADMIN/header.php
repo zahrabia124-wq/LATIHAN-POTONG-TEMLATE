@@ -3,9 +3,11 @@
 ke mana2 and will return to page login.php -->
 <?
 session_start();
-if ($_SESSION['status'] !="login"){
-    header("Location:login.php?pesan=belum_login");
-}
+// TODO: belum ada proses login yg beneran (lihat login.html & process_login.php yg belum ada)
+// sementara dimatikan biar dashboard bisa diakses langsung tanpa login
+// if ($_SESSION['status'] !="login"){
+//     header("Location:login.html?pesan=belum_login");
+// }
 ?>
 
 <!DOCTYPE html>

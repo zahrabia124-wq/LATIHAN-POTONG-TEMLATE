@@ -1,1 +1,8 @@
 node_modules
+
+# Docker (local-only, not pushed to GitHub)
+Dockerfile
+docker-compose.yml
+docker-compose.override.yml
+.dockerignore
+docker/
