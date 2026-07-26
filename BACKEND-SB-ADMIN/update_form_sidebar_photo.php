@@ -13,7 +13,11 @@ id_sidebar_photo='$id_sidebar_photo'");
 
 // fungsi untuk menampilkan isi tabel menggunakan mysqli_fetch_object (->)
 // selanjutnya menuju form bawah dengan menggunakan value untuk inputan setiap data
-$id_sidebar_photo = mysqli_fetch_object($select_id);
+$data_sidebar_photo = mysqli_fetch_object($select_id);
+
+if (!$data_sidebar_photo) {
+    die("Data sidebar photo dengan id_sidebar_photo='$id_sidebar_photo' tidak ditemukan.");
+}
 
 // di bawah ini adalah isi asli dr form_profile
 ?>
@@ -80,7 +84,7 @@ $select_sidebar_photo = mysqli_query(
 
   <input type="hidden"
        name="id_sidebar_photo"
-       value="<?php echo $id_sidebar_photo->id_sidebar_photo; ?>">
+       value="<?php echo $data_sidebar_photo->id_sidebar_photo; ?>">
 
 
     <button type="submit" class="btn btn-primary">
