@@ -1,7 +1,7 @@
 <!-- we are from process_login.php -->
 <!-- Here we create session status that jika blm login maka tidak bisa
 ke mana2 and will return to page login.php -->
-<?
+<?php
 session_start();
 // TODO: belum ada proses login yg beneran (lihat login.html & process_login.php yg belum ada)
 // sementara dimatikan biar dashboard bisa diakses langsung tanpa login

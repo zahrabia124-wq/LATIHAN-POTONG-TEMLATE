@@ -11,7 +11,10 @@ if (!empty($_FILES['sidebar_photo']['name'])) {
     // pakai ekstensi asli file yg diupload, jangan dipaksa .jpg
     $ekstensi = pathinfo($_FILES['sidebar_photo']['name'], PATHINFO_EXTENSION);
     $namaimage = time() . "." . $ekstensi;
-    move_uploaded_file($_FILES['sidebar_photo']['tmp_name'], $path . $namaimage);
+
+    if (!move_uploaded_file($_FILES['sidebar_photo']['tmp_name'], $path . $namaimage)) {
+        die("Gagal upload foto ke folder '$path'. Cek apakah folder tersebut ada dan writable.");
+    }
 
     // ambil nama foto lama sebelum di-overwrite di database
     $imgsidebar_photo = mysqli_query($koneksi, "SELECT * FROM sidebar_photo WHERE
